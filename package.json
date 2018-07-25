@@ -1,6 +1,6 @@
 {
   "name": "curie-util-es5",
-  "version": "1.2.0-0",
+  "version": "1.2.0",
   "description": "Javascript Library to Translate CURIEs to IRIs and vice versa. ES5 Version.",
   "main": "curie-util.js",
   "scripts": {
