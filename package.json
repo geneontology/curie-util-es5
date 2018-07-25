@@ -1,6 +1,6 @@
 {
   "name": "@geneontology/curie-util-es5",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Javascript Library to Translate CURIEs to IRIs and vice versa. ES5 Version.",
   "main": "curie-util.js",
   "scripts": {
