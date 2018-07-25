@@ -2,10 +2,6 @@
 var Trie = require("./trie/trie");
 
 
-
-
-
-
 //=======================================================================
 //
 //             Simple Implementation of a Bidirectional Map
@@ -44,9 +40,14 @@ BiMap.prototype.values = function() {
 
 //=======================================================================
 //
-//             Utility function to convert CURIE <-> IRI
+//             Utility Class to convert CURIE <-> IRI
 //
 //=======================================================================
+
+/**
+ * 
+ * @param {*} mapping A Bidirectional Map of CURIE <-> IRI created through parseContext(context.jsonld)
+ */
 function CurieUtil(mapping) {
     this.trie = new Trie();
     this.curieMap = mapping;
@@ -64,6 +65,10 @@ CurieUtil.prototype.getExpansion = function(curiePrefix) {
     return this.curieMap.get(curiePrefix);
 }
 
+/**
+ * Return the CURIE associated to the given IRI if any exists. Return null otherwise
+ * @param {*} iri The IRI of an entity (e.g. http://identifiers.org/zfin/ZDB-GENE-031112-7, http://identifiers.org/mgi/MGI:34340)
+ */
 CurieUtil.prototype.getCurie = function(iri) {
     var prefix = this.trie.getMatchingPrefix(iri);
     if(!prefix || prefix == "") {
@@ -74,6 +79,10 @@ CurieUtil.prototype.getCurie = function(iri) {
     }
 }
 
+/**
+ * Return the IRI associated to the given CURIE if any exists. Return null otherwise
+ * @param {*} curie The CURIE of an entity (e.g. ZFIN:ZDB-GENE-031112-7, MGI:MGI:34340)
+ */
 CurieUtil.prototype.getIri = function(curie) {
     if(!curie)
       return null;
@@ -93,6 +102,10 @@ CurieUtil.prototype.getCurieMap = function() {
 }
 
 
+/**
+ * Returns a BiDirectional Map of the @context of a JSON-LD file
+ * @param {} jsonObject A JSON-LD file with a @context field
+ */
 function parseContext(jsonObject) {
     try {
         var jsonContext = jsonObject["@context"];
@@ -107,4 +120,5 @@ function parseContext(jsonObject) {
 }
 
 
-
+module.exports.parseContext = parseContext;
+module.exports.CurieUtil = CurieUtil;

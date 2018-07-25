@@ -1,5 +1,5 @@
 # curie-util-js
-Javascript utility library to translate CURIEs to IRIs and vice versa. 
+Javascript Library to translate CURIEs to IRIs and vice versa. 
 ES5 Version based on the Java Implementation: https://github.com/prefixcommons/curie-util
 
 
