@@ -1,0 +1,26 @@
+{
+  "name": "curie-util-es5",
+  "version": "1.0.0",
+  "description": "Javascript Library to Translate CURIEs to IRIs and vice versa. ES5 Version.",
+  "main": "curie-util.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geneontology/curie-util-es5.git"
+  },
+  "keywords": [
+    "Javascript",
+    "CURIE",
+    "IRI",
+    "ES5",
+    "JSON-LD"
+  ],
+  "author": "Laurent-Philippe Albou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geneontology/curie-util-es5/issues"
+  },
+  "homepage": "https://github.com/geneontology/curie-util-es5#readme"
+}
