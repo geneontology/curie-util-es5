@@ -4,7 +4,7 @@ ES5 Version based on the Java Implementation: https://github.com/prefixcommons/c
 
 ## Install
 ```
-npm install --save curie-util-es5
+npm install --save @geneontology/curie-util-es5
 ```
 
 Use `require` or `import` to use the package in your JavaScript code
