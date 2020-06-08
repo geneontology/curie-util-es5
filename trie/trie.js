@@ -30,7 +30,7 @@ Trie.prototype.insert = function (word) {
             crawl = child.get(ch);
             // Else create a child
         } else {
-            temp = new TrieNode(ch);
+            var temp = new TrieNode(ch);
             child.set(ch, temp);
             crawl = temp;
         }
