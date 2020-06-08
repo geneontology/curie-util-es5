@@ -54,7 +54,7 @@ Trie.prototype.getMatchingPrefix = function (input) {
     var prevMatch = 0;
     // Iterate through all characters of input string 'str' and traverse
     // down the Trie
-    for (level = 0; level < length; level++) {
+    for (var level = 0; level < length; level++) {
         // Find current character of str
         var ch = input.charAt(level);
 

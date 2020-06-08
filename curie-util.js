@@ -52,7 +52,7 @@ function CurieUtil(mapping) {
     this.trie = new Trie();
     this.curieMap = mapping;
 
-    for(val of mapping.values()) {
+    for(var val of mapping.values()) {
         this.trie.insert(val);
     }
 }
